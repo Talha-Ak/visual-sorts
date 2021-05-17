@@ -29,8 +29,6 @@ export const swap = (idx1: number, idx2: number, array: number[], animArray: Ani
 };
 
 export const generateArray = (size: number): number[] => {
-  console.log('generating array');
-  
   const array = Array.from(Array(size).keys());
 
   // Durstenfeld shuffle algorithm: https://stackoverflow.com/a/12646864

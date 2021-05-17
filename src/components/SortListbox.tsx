@@ -12,7 +12,7 @@ interface Props {
 const SortListbox = ({list, selectedItem, setSelectedItem, disabled}: Props) => {
 
   return (
-    <div className="w-56">
+    <div className="w-64">
       <Listbox value={selectedItem} onChange={setSelectedItem} disabled={disabled}>
           <>
             <Listbox.Label className="text-sm font-medium text-gray-500">Algorithm</Listbox.Label>

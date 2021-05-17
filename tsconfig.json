@@ -12,7 +12,6 @@
     ],
     "sourceMap": true,
     "importHelpers": true,
-    "declaration": true,
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
