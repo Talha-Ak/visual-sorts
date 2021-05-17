@@ -15,10 +15,10 @@ const SortListbox = ({list, selectedItem, setSelectedItem, disabled}: Props) => 
     <div className="w-64">
       <Listbox value={selectedItem} onChange={setSelectedItem} disabled={disabled}>
           <>
-            <Listbox.Label className="text-sm font-medium text-gray-500">Algorithm</Listbox.Label>
+            <Listbox.Label className="text-sm font-medium text-gray-500 dark:text-gray-400">Algorithm</Listbox.Label>
             <div className="relative">
-              <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left sm:text-sm bg-white disabled:bg-gray-100 hover:bg-blue-50 rounded-md shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-default">
-                <span className="block truncate">{list[selectedItem]}</span>
+              <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left sm:text-sm bg-white dark:bg-trueGray-800 disabled:bg-gray-100 dark:disabled:bg-trueGray-600 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-150 rounded-md shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-default">
+                <span className="block truncate dark:text-gray-400">{list[selectedItem]}</span>
                 <span className="absolute inset-y-0 right-0 flex items-center p-2 pointer-events-none">
                   <HiSelector
                     className="w-5 h-5 text-gray-400"
@@ -32,12 +32,12 @@ const SortListbox = ({list, selectedItem, setSelectedItem, disabled}: Props) => 
                 leaveFrom="transform opacity-100 translate-y-0"
                 leaveTo="transform opacity-0 translate-y-1.5 md:-translate-y-1.5"
               >
-                <Listbox.Options static className="absolute bottom-full md:bottom-auto z-10 w-full py-1 my-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <Listbox.Options static className="absolute bottom-full md:bottom-auto z-10 w-full py-1 my-1 overflow-auto text-base bg-white dark:bg-trueGray-800 rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {list.map((name, nameIdx) => (
                     <Listbox.Option
                       key={nameIdx}
                       className={({ active }) =>
-                        `${active ? 'text-blue-900 bg-blue-100' : 'text-gray-900'}
+                        `${active ? 'text-blue-900 dark:text-blue-300 bg-blue-100 dark:bg-gray-700' : 'text-gray-900 dark:text-gray-400'}
                           cursor-default select-none relative py-2 pl-10 pr-4`
                       }
                       value={nameIdx}
