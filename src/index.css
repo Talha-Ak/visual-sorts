@@ -3,7 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  #root {
+    @apply relative h-full
+  };
   body {
-    @apply dark:bg-trueGray-900 transition-colors duration-150
+    @apply h-full dark:bg-trueGray-900 transition-colors duration-150
+  };
+};
+
+@layer utilities {
+  .slant-top {
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .slant-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
   }
 }

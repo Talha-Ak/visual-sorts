@@ -1,8 +1,20 @@
-# Getting Started with Create React App
+# Visual Sorts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A web app that visualises sorting algorithms.
 
-## Available Scripts
+This web app visualises several different sorting algorithms to help build a better understanding on how they function.
+
+This web app was built using [React](https://reactjs.org/) (with [Create React App](https://github.com/facebook/create-react-app)) and [TypeScript](https://www.typescriptlang.org/).
+
+This is a first-time project using both these technologies.
+
+Some other notable modules used were:
+
+- [Tailwind CSS](https://tailwindcss.com/) as the CSS framework
+- [@headlessui/react](https://github.com/tailwindlabs/headlessui/tree/main/packages/%40headlessui-react) for a few components
+- [react-icons](https://github.com/react-icons/react-icons) for the icons
+
+## Create React App Scripts
 
 In the project directory, you can run:
 

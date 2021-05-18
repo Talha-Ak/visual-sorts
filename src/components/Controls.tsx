@@ -50,7 +50,7 @@ const Controls = ({
       setSelectedItem={setSelectedSortIdx}
       disabled={isRunning}
     />
-    <div className='w-64 mt-2 mb-8 grid grid-cols-3 gap-x-4'>
+    <div className='w-64 mt-2 grid grid-cols-3 gap-x-4'>
       <ControlButton handleClick={handleShuffleClick}>
         <BiRefresh className="w-5 h-5 mx-auto" aria-hidden="true" />
         Shuffle
@@ -59,7 +59,7 @@ const Controls = ({
       <button
         onClick={handleSortClick}
         type='button'
-        className='z-0 min-w-0 h-3/4 px-4 py-2.5 self-center text-sm font-medium text-blue-900 dark:text-blue-400 bg-blue-100 dark:bg-gray-700 hover:bg-blue-200 dark:hover:bg-gray-600 active:bg-blue-300 dark:active:bg-gray-500 rounded-md shadow-md transition transform motion-reduce:transition-none duration-75 ease-out active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500'
+        className='z-0 min-w-0 h-3/4 px-4 py-2.5 self-center text-sm font-title text-blue-900 dark:text-blue-400 bg-blue-100 dark:bg-gray-700 hover:bg-blue-200 dark:hover:bg-gray-600 active:bg-blue-300 dark:active:bg-gray-500 rounded-md shadow-md transition transform motion-reduce:transition-none duration-75 ease-out active:translate-y-0.5 active:shadow-none focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500'
       >
         Sort
     </button>

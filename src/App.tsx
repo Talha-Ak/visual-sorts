@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     console.log('effect');
-    
+
     if (active) {
       startSort();
     } else {
@@ -107,11 +107,14 @@ const App = () => {
   };
 
   return (
-    <div className='h-screen max-w-screen-2xl mx-auto flex flex-col gap-8 md:gap-0'>
-      <h1 className='mt-4 font-sans font-black text-center text-4xl md:text-6xl dark:text-trueGray-200 transition-colors duration-150'>Visual Sorts</h1>
-      <div className='flex-grow gap-y-5 md:grid md:grid-cols-10 items-center'>
+    <>
+    <div className='absolute inset-x-0 top-0 h-48 z-[-1] slant-bottom bg-teal-50 dark:bg-trueGray-800 transition-colors duration-150' />
+    <div className='absolute inset-x-0 bottom-0 h-32 z-[-1] slant-top bg-blue-50 dark:bg-gray-800 transition-colors duration-150' />
+    <div className='min-h-screen max-w-screen-2xl mx-auto flex flex-col gap-12'>
+      <h1 className='flex-shrink-0 mt-4 font-title font-black text-center text-4xl md:text-6xl dark:text-trueGray-200 transition-colors duration-150'>Visual Sorts</h1>
+      <div className='flex-1 gap-y-5 md:grid md:grid-cols-10 items-center'>
         <Visualiser sortArray={sortArray} />
-        <div className='my-8 md:m-0 md:col-span-4 lg:col-span-3 flex flex-col items-center gap-y-5 mx-4'>
+        <div className='mt-8 md:m-0 md:col-span-4 lg:col-span-3 flex flex-col items-center gap-y-5 mx-4'>
           <Controls
             isRunning={active}
             sortNames={sortingAlgorithms.map(sort => sort.name)}
@@ -128,18 +131,19 @@ const App = () => {
           />
         </div>
       </div>
-        <div className='p-4 flex items-center justify-evenly text-gray-500 dark:text-gray-400'>
-          <ControlButton handleClick={() => window.location.href = 'https://github.com/Talha-Ak/visual-sorts'}>
-            View on
-            <FaGithub className='ml-1.5 mb-1 inline'/>
-          </ControlButton>
-          <div className='flex items-center justify-center space-x-1.5'>
-            <HiSun className='inline w-5 h-5' />
-            <NightModeToggle isNightMode={isDarkMode} handleToggle={setIsDarkMode} isDisabled={active}/>
-            <HiMoon className='inline w-5 h-5' />
-          </div>
+      <div className='flex-shrink-0 p-4 flex items-center justify-evenly text-gray-500 dark:text-gray-400'>
+        <ControlButton handleClick={() => window.location.href = 'https://github.com/Talha-Ak/visual-sorts'}>
+          View on
+            <FaGithub className='ml-1.5 mb-1 inline' />
+        </ControlButton>
+        <div className='flex items-center justify-center space-x-1.5'>
+          <HiSun className='inline w-5 h-5' />
+          <NightModeToggle isNightMode={isDarkMode} handleToggle={setIsDarkMode} isDisabled={active} />
+          <HiMoon className='inline w-5 h-5' />
         </div>
+      </div>
     </div>
+    </>
   );
 };
 
