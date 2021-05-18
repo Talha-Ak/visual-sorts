@@ -20,7 +20,7 @@ const sort = (array: number[]) => {
     searchSize--;
   }
 
-  anim.push({type: 'end', indicies: [-1, -1], array: array});
+  anim.push({type: 'end', values: [-1, -1], array: array});
   return anim;
 };
 

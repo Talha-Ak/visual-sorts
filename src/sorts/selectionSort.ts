@@ -14,7 +14,7 @@ const sort = (array: number[]) => {
     }
   }
 
-  anim.push({type: 'end', indicies: [-1, -1], array});
+  anim.push({type: 'end', values: [-1, -1], array});
   return anim;
 };
 

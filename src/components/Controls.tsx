@@ -50,7 +50,7 @@ const Controls = ({
       setSelectedItem={setSelectedSortIdx}
       disabled={isRunning}
     />
-    <div className='w-64 mt-2 mb-8 grid grid-cols-3 gap-x-2 justify-items-center'>
+    <div className='w-64 mt-2 mb-8 grid grid-cols-3 gap-x-4'>
       <ControlButton handleClick={handleShuffleClick}>
         <BiRefresh className="w-5 h-5 mx-auto" aria-hidden="true" />
         Shuffle
