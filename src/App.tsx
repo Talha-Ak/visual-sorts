@@ -17,8 +17,6 @@ const App = () => {
   activeRef.current = active;
 
   useEffect(() => {
-    console.log('effect');
-
     if (active) {
       startSort();
     } else {

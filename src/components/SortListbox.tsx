@@ -32,7 +32,7 @@ const SortListbox = ({list, selectedItem, setSelectedItem, disabled}: Props) => 
                 leaveFrom="transform opacity-100 translate-y-0"
                 leaveTo="transform opacity-0 translate-y-1.5 md:-translate-y-1.5"
               >
-                <Listbox.Options static className="absolute bottom-full md:bottom-auto z-10 w-full py-1 my-1 overflow-auto text-base bg-white dark:bg-trueGray-800 rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <Listbox.Options static className="absolute bottom-full md:bottom-auto z-10 w-full py-1 my-1 overflow-auto text-base bg-white dark:bg-trueGray-800 rounded-md shadow-lg max-h-64 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {list.map((name, nameIdx) => (
                     <Listbox.Option
                       key={nameIdx}

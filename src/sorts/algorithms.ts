@@ -3,6 +3,7 @@ import { insertionSort } from './insertionSort';
 import { selectionSort } from './selectionSort';
 import { mergeSort } from './mergeSort';
 import { quickSort } from './quickSort';
+import { heapSort } from './heapsort';
 
 export interface SortingAlgorithm {
   name: string;
@@ -56,6 +57,6 @@ export const generateArray = (size: number): number[] => {
   return array;
 };
 
-const algorithms = [bubbleSort, insertionSort, mergeSort, quickSort, selectionSort];
+const algorithms = [bubbleSort, heapSort, insertionSort, mergeSort, quickSort, selectionSort];
 
 export default algorithms;
