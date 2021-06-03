@@ -1,3 +1,4 @@
+import infoQuickSort from 'components/info/infoQuickSort';
 import { AnimationStep, isGreater, isSmaller, SortingAlgorithm, swap } from './algorithms';
 
 const sort = (array: number[]) => {
@@ -45,5 +46,6 @@ const partition = (array: number[], startIdx: number, endIdx: number, anim: Anim
 
 export const quickSort: SortingAlgorithm = {
   name: 'Quick Sort',
-  sort
+  sort,
+  info: infoQuickSort,
 };

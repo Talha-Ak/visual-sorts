@@ -1,3 +1,4 @@
+import infoSelectionSort from 'components/info/infoSelectionSort';
 import {SortingAlgorithm, AnimationStep, isSmaller, swap } from './algorithms';
 
 const sort = (array: number[]) => {
@@ -20,5 +21,6 @@ const sort = (array: number[]) => {
 
 export const selectionSort: SortingAlgorithm = {
   name: 'Selection Sort',
-  sort
+  sort,
+  info: infoSelectionSort,
 };

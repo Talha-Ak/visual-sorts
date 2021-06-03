@@ -1,3 +1,4 @@
+import infoBubbleSort from 'components/info/infoBubbleSort';
 import {SortingAlgorithm, AnimationStep, isGreater, swap } from './algorithms';
 
 const sort = (array: number[]) => {
@@ -26,5 +27,6 @@ const sort = (array: number[]) => {
 
 export const bubbleSort: SortingAlgorithm = {
   name: 'Bubble Sort',
-  sort
+  sort,
+  info: infoBubbleSort,
 };

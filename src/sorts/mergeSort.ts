@@ -1,4 +1,5 @@
-import { AnimationStep, isLeq } from "./algorithms";
+import infoMergeSort from "components/info/infoMergeSort";
+import { AnimationStep, isLeq, SortingAlgorithm } from "./algorithms";
 
 const sort = (array: number[]) => {
   const anim: AnimationStep[] = [];
@@ -48,7 +49,8 @@ const merge = (array: number[], clonedArray: number[],
   }
 };
 
-export const mergeSort = {
+export const mergeSort: SortingAlgorithm = {
   name: 'Merge Sort',
-  sort
+  sort,
+  info: infoMergeSort,
 };

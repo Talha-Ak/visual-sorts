@@ -1,18 +1,14 @@
 import Controls from './components/Controls';
-import NightModeToggle from './components/NightModeToggle';
 import Visualiser from './components/Visualiser';
 import sortingAlgorithms, { AnimationStep, generateArray } from './sorts/algorithms';
-import { FaGithub } from 'react-icons/fa';
-import { HiSun, HiMoon } from 'react-icons/hi';
 import { useEffect, useState, useRef } from 'react';
-import ControlButton from 'components/ControlButton';
+import Footer from 'components/Footer';
 
 const App = () => {
 
   const [sortArray, setSortArray] = useState(() => generateArray(40));
   const [selectedSortIdx, setSelectedSortIdx] = useState(0);
   const [active, setActive] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(document.documentElement.classList.contains('dark'));
   const activeRef = useRef(active);
   activeRef.current = active;
 
@@ -23,15 +19,6 @@ const App = () => {
       setSortArray(sortArray.slice());
     }
   }, [active]);
-
-  useEffect(() => {
-    localStorage.setItem('isDarkTheme', isDarkMode.toString());
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
 
   const startSort = () => {
     const animations = sortingAlgorithms[selectedSortIdx].sort(sortArray.slice());
@@ -130,15 +117,7 @@ const App = () => {
         </div>
       </div>
       <div className='flex-shrink-0 p-4 flex items-center justify-evenly text-gray-500 dark:text-gray-400'>
-        <ControlButton handleClick={() => window.location.href = 'https://github.com/Talha-Ak/visual-sorts'}>
-          View on
-            <FaGithub className='ml-1.5 mb-1 inline' />
-        </ControlButton>
-        <div className='flex items-center justify-center space-x-1.5'>
-          <HiSun className='inline w-5 h-5' />
-          <NightModeToggle isNightMode={isDarkMode} handleToggle={setIsDarkMode} isDisabled={active} />
-          <HiMoon className='inline w-5 h-5' />
-        </div>
+        <Footer />
       </div>
     </div>
     </>

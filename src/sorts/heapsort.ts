@@ -1,4 +1,5 @@
-import { AnimationStep, swap, isSmaller } from "./algorithms";
+import infoHeapSort from "components/info/infoHeapSort";
+import { AnimationStep, swap, isSmaller, SortingAlgorithm } from "./algorithms";
 
 const sort = (array: number[]) => {
   const anim: AnimationStep[] = [];
@@ -45,7 +46,8 @@ const getNodeParent = (i: number) => Math.floor((i - 1) / 2);
 const getNodeLeftChild = (i: number) => 2 * i + 1;
 // const getNodeRightChild = i => 2 * i + 2;
 
-export const heapSort = {
+export const heapSort: SortingAlgorithm = {
   name: 'Heap Sort',
-  sort
+  sort,
+  info: infoHeapSort,
 };

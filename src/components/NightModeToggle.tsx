@@ -3,18 +3,16 @@ import { Switch } from '@headlessui/react';
 interface Props {
   handleToggle: (checked: boolean) => void;
   isNightMode: boolean;
-  isDisabled: boolean;
 }
 
-const NightModeToggle = ({handleToggle, isNightMode, isDisabled}: Props) => {
+const NightModeToggle = ({handleToggle, isNightMode}: Props) => {
 
   return (
       <Switch
-        disabled={isDisabled}
         checked={isNightMode}
         onChange={handleToggle}
         className={`${isNightMode ? 'bg-teal-900' : 'bg-teal-500'}
-          inline-flex flex-shrink-0 h-[30.5px] w-[58px] border-2 border-transparent rounded-full cursor-pointer disabled:bg-gray-400 dark:disabled:bg-trueGray-600 disabled:cursor-not-allowed transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+          inline-flex flex-shrink-0 h-[30.5px] w-[58px] border-2 border-transparent rounded-full cursor-pointer disabled:bg-gray-400 dark:disabled:bg-trueGray-600 disabled:cursor-not-allowed transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500`}
       >
         <span className="sr-only">Use setting</span>
         <span

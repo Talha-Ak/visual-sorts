@@ -8,6 +8,7 @@ import { heapSort } from './heapsort';
 export interface SortingAlgorithm {
   name: string;
   sort: (array: number[]) => AnimationStep[];
+  info: () => JSX.Element;
 }
 
 export type AnimationStep = AnimationChange | AnimationEnd;

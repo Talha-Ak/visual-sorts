@@ -1,4 +1,5 @@
-import {SortingAlgorithm, AnimationStep, isGreater, swap } from './algorithms';
+import { SortingAlgorithm, AnimationStep, isGreater, swap } from './algorithms';
+import infoInsertionSort from '../components/info/infoInsertionSort';
 
 const sort = (array: number[]) => {
   const anim: AnimationStep[] = [];
@@ -20,5 +21,6 @@ const sort = (array: number[]) => {
 
 export const insertionSort: SortingAlgorithm = {
   name: 'Insertion Sort',
-  sort
+  sort,
+  info: infoInsertionSort,
 };
