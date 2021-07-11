@@ -97,7 +97,7 @@ const App = () => {
     <div className='absolute inset-x-0 bottom-0 h-32 z-[-1] slant-top bg-blue-50 dark:bg-gray-800 transition-colors duration-150' />
     <div className='min-h-screen max-w-screen-2xl mx-auto flex flex-col gap-12'>
       <h1 className='flex-shrink-0 mt-4 font-title font-black text-center text-4xl md:text-6xl dark:text-trueGray-200 transition-colors duration-150'>Visual Sorts</h1>
-      <div className='flex-1 gap-y-5 md:grid md:grid-cols-10 items-center'>
+      <div className='flex-1 gap-y-5 md:grid md:grid-cols-10 items-center content-center'>
         <Visualiser sortArray={sortArray} />
         <div className='mt-8 md:m-0 md:col-span-4 lg:col-span-3 flex flex-col items-center gap-y-5 mx-4'>
           <Controls
