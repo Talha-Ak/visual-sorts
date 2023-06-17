@@ -1,11 +1,10 @@
-import Controls from './components/Controls';
-import Visualiser from './components/Visualiser';
-import sortingAlgorithms, { AnimationStep, generateArray } from './sorts/algorithms';
 import { useEffect, useState, useRef } from 'react';
-import Footer from 'components/Footer';
+import sortingAlgorithms, { AnimationStep, generateArray } from './sorts/algorithms';
+import Controls from './components/Controls.tsx';
+import Footer from './components/Footer.tsx';
+import Visualiser from './components/Visualiser.tsx';
 
 const App = () => {
-
   const [sortArray, setSortArray] = useState(() => generateArray(40));
   const [selectedSortIdx, setSelectedSortIdx] = useState(0);
   const [active, setActive] = useState(false);
@@ -93,10 +92,10 @@ const App = () => {
 
   return (
     <>
-    <div className='absolute inset-x-0 top-0 h-48 z-[-1] slant-bottom bg-teal-50 dark:bg-trueGray-800 transition-colors duration-150' />
+    <div className='absolute inset-x-0 top-0 h-48 z-[-1] slant-bottom bg-teal-50 dark:bg-neutral-800 transition-colors duration-150' />
     <div className='absolute inset-x-0 bottom-0 h-32 z-[-1] slant-top bg-blue-50 dark:bg-gray-800 transition-colors duration-150' />
     <div className='min-h-screen max-w-screen-2xl mx-auto flex flex-col gap-12'>
-      <h1 className='flex-shrink-0 mt-4 font-title font-black text-center text-4xl md:text-6xl dark:text-trueGray-200 transition-colors duration-150'>Visual Sorts</h1>
+      <h1 className='flex-shrink-0 mt-4 font-title font-black text-center text-4xl md:text-6xl dark:text-neutral-200 transition-colors duration-150'>Visual Sorts</h1>
       <div className='flex-1 gap-y-5 md:grid md:grid-cols-10 items-center content-center'>
         <Visualiser sortArray={sortArray} />
         <div className='mt-8 md:m-0 md:col-span-4 lg:col-span-3 flex flex-col items-center gap-y-5 mx-4'>

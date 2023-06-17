@@ -1,4 +1,4 @@
-import infoBubbleSort from 'components/info/infoBubbleSort';
+import infoBubbleSort from '../components/info/infoBubbleSort.tsx';
 import {SortingAlgorithm, AnimationStep, isGreater, swap } from './algorithms';
 
 const sort = (array: number[]) => {
