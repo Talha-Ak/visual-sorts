@@ -24,7 +24,7 @@ const InfoSlideover = ({ sliderOpen, setSliderOpen, selectedSortIdx }: Props) =>
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="absolute inset-0 bg-gray-500 dark:bg-trueGray-900 bg-opacity-75 dark:bg-opacity-75 transition-opacity" />
+            <Dialog.Overlay className="absolute inset-0 bg-gray-500 dark:bg-neutral-900 bg-opacity-75 dark:bg-opacity-75 transition-opacity" />
           </Transition.Child>
           <div className="fixed inset-y-0 right-0 max-w-full flex">
             <Transition.Child
@@ -37,9 +37,9 @@ const InfoSlideover = ({ sliderOpen, setSliderOpen, selectedSortIdx }: Props) =>
               leaveTo="translate-x-full"
             >
               <div className="relative w-screen max-w-lg">
-                <div className="h-full flex flex-col py-6 bg-white dark:bg-trueGray-800 shadow-xl overflow-y-auto">
+                <div className="h-full flex flex-col py-6 bg-white dark:bg-neutral-800 shadow-xl overflow-y-auto">
                   <div className="inline-flex justify-between px-4 sm:px-6">
-                    <Dialog.Title className="text-lg font-medium text-gray-900 dark:text-trueGray-200">
+                    <Dialog.Title className="text-lg font-medium text-gray-900 dark:text-neutral-200">
                       {sortingAlgorithms[selectedSortIdx].name}
                     </Dialog.Title>
                     <Transition.Child
@@ -60,7 +60,7 @@ const InfoSlideover = ({ sliderOpen, setSliderOpen, selectedSortIdx }: Props) =>
                         </button>
                     </Transition.Child>
                   </div>
-                  <div className="mt-6 relative flex-1 px-4 sm:px-6 text-gray-900 dark:text-trueGray-200">
+                  <div className="mt-6 relative flex-1 px-4 sm:px-6 text-gray-900 dark:text-neutral-200">
                     {sortingAlgorithms[selectedSortIdx].info()}
                   </div>
                 </div>

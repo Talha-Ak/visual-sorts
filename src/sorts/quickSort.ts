@@ -1,4 +1,4 @@
-import infoQuickSort from 'components/info/infoQuickSort';
+import infoQuickSort from '../components/info/infoQuickSort.tsx';
 import { AnimationStep, isGreater, isSmaller, SortingAlgorithm, swap } from './algorithms';
 
 const sort = (array: number[]) => {

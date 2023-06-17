@@ -17,7 +17,7 @@ const SortListbox = ({list, selectedItem, setSelectedItem, disabled}: Props) => 
           <>
             <Listbox.Label className="text-sm font-medium text-gray-500 dark:text-gray-400">Algorithm</Listbox.Label>
             <div className="relative">
-              <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left sm:text-sm bg-white dark:bg-trueGray-800 disabled:bg-gray-100 dark:disabled:bg-trueGray-600 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-150 rounded-md shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-default">
+              <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left sm:text-sm bg-white dark:bg-neutral-800 disabled:bg-gray-100 dark:disabled:bg-neutral-600 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-150 rounded-md shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-default">
                 <span className="block truncate dark:text-gray-400">{list[selectedItem]}</span>
                 <span className="absolute inset-y-0 right-0 flex items-center p-2 pointer-events-none">
                   <HiSelector
@@ -32,7 +32,7 @@ const SortListbox = ({list, selectedItem, setSelectedItem, disabled}: Props) => 
                 leaveFrom="transform opacity-100 translate-y-0"
                 leaveTo="transform opacity-0 translate-y-1.5 md:-translate-y-1.5"
               >
-                <Listbox.Options static className="absolute bottom-full md:bottom-auto z-10 w-full py-1 my-1 overflow-auto text-base bg-white dark:bg-trueGray-800 rounded-md shadow-lg max-h-64 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <Listbox.Options static className="absolute bottom-full md:bottom-auto z-10 w-full py-1 my-1 overflow-auto text-base bg-white dark:bg-neutral-800 rounded-md shadow-lg max-h-64 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {list.map((name, nameIdx) => (
                     <Listbox.Option
                       key={nameIdx}

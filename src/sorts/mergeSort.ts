@@ -1,4 +1,4 @@
-import infoMergeSort from "components/info/infoMergeSort";
+import infoMergeSort from "../components/info/infoMergeSort.tsx";
 import { AnimationStep, isLeq, SortingAlgorithm } from "./algorithms";
 
 const sort = (array: number[]) => {

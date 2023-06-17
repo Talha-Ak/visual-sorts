@@ -7,7 +7,7 @@
     @apply relative h-full
   };
   body {
-    @apply h-full dark:bg-trueGray-900 transition-colors duration-150
+    @apply h-full dark:bg-neutral-900 transition-colors duration-150
   };
 };
 

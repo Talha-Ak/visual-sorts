@@ -1,24 +1,16 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const colors = require('tailwindcss/colors');
+/** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: 'class', // or 'media' or 'class'
+export default {
+  darkMode: 'class',
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     fontFamily: {
       title: ['Josefin Sans', ...defaultTheme.fontFamily.sans],
     },
-    extend: {
-      colors: {
-        teal: colors.teal,
-        trueGray: colors.trueGray,
-      },
-    },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-};
+}
+
