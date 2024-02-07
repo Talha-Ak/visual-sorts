@@ -1,7 +1,7 @@
 # Visual Sorts
 > A web app that visualises sorting algorithms.
 
-### Visit this web app at https://talha-ak.github.io/visual-sorts/
+### Visit this web app at [github.talhaak.com/visual-sorts](https://github.talhaak.com/visual-sorts/)
 
 This web app visualises several different sorting algorithms to help build a better understanding on how they function.
 
